@@ -1,0 +1,18 @@
+.python-version
+__pycache__
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# documentation
+rbe/docs
+
+# databases and data files
+*.db
+
+# benchmarks
+graph*.png
+asymptotics*.png
+bench.txt
+*.csv
+bench-ops/*.txt
