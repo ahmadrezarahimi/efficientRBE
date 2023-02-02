@@ -2,6 +2,8 @@
 
 Implementation and benchmarking of our paper[^GKMR] describing the first efficient construction of registration-based encryption (RBE).
 
+**THIS IS A PROTOTYPE IMPLEMENTATION, DO NOT USE IN PRODUCTION.**
+
 [^GKMR]: N. Glaeser, D. Kolonelos, G. Malavolta, A. Rahimi. Efficient Registration-Based Encryption. Cryptology ePrint Archive paper [2022/1505](https://eprint.iacr.org/2022/1505).
 
 ## Dependencies
