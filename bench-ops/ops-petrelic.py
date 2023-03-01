@@ -16,6 +16,9 @@ if __name__ == "__main__":
     scalar2 = G2.order().random()
     scalart = GT.order().random()
 
+    mult_g1_time = 0.0
+    mult_g2_time = 0.0
+    mult_gt_time = 0.0
     exp_g1_time = 0.0
     exp_g2_time = 0.0
     pairing_time = 0.0
@@ -49,7 +52,20 @@ if __name__ == "__main__":
         c_exp = c ** scalart
         exp_gt_time += time.time()-start
 
-        # --- serialization ---
+        # multiplications
+        start = time.time()
+        prod1 = a * a_exp
+        mult_g1_time += time.time()-start
+        
+        start = time.time()
+        prod1 = b * b_exp
+        mult_g2_time += time.time()-start
+
+        start = time.time()
+        prodt = c * c_exp
+        mult_gt_time += time.time()-start
+
+        # --- (de)serialization ---
         # G1
         start = time.time()
         a_bytes = G1Element.to_binary(a)
@@ -80,6 +96,10 @@ if __name__ == "__main__":
         print(i if i>0 and i%10==0 else ".", end="", flush=True)
 
     print("\n")
+    print("mult in G1\t{}".format(mult_g1_time / iters))
+    print("mult in G2\t{}".format(mult_g2_time / iters))
+    print("mult in GT\t{}".format(mult_gt_time / iters))
+    print()
     print("exp in G1\t{}".format(exp_g1_time / iters))
     print("exp in G2\t{}".format(exp_g2_time / iters))
     print("exp in GT\t{}".format(exp_gt_time / iters))
