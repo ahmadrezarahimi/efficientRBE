@@ -132,8 +132,8 @@ class CRS:
             if (i == self.n):
                 cur.execute("INSERT INTO crs(rowid, pk) VALUES(?,?)",(2*i+3,"empty"))
                 continue
-            cur.execute("INSERT INTO crs(rowid, pk) VALUES(?,?)",(2*i+3,self.g1.to_binary()))
-            cur.execute("INSERT INTO crs(rowid, pk) VALUES(?,?)",(2*i+4,self.g2.to_binary()))
+            cur.execute("INSERT INTO crs(rowid, pk) VALUES(?,?)",(2*i+3,self.h_parameters_g1[i].to_binary()))
+            cur.execute("INSERT INTO crs(rowid, pk) VALUES(?,?)",(2*i+4,self.h_parameters_g2[i].to_binary()))
 
         con.commit()
         con.close()

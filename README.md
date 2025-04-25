@@ -8,7 +8,8 @@ Implementation and benchmarking of our paper[^GKMR] describing the first efficie
 
 ## Dependencies
 
-We use [petrelic](https://github.com/spring-epfl/petrelic), a Python wrapper around [RELIC](https://github.com/relic-toolkit/relic), to implement the scheme. For installation (Linux only) simply run `pip install petrelic` (full details [here](https://petrelic.readthedocs.io/en/latest/install.html)). For installation of petrelic on MacOS with Apple Silicon, please follow [here](https://github.com/ahmadrezarahimi/efficientRBE/blob/main/petrelic-macos.md).
+We use [petrelic](https://github.com/spring-epfl/petrelic), a Python wrapper around [RELIC](https://github.com/relic-toolkit/relic), to implement the scheme. For installation (Linux only) simply run `pip install petrelic` (full details [here](https://petrelic.readthedocs.io/en/latest/install.html)).
+
 ## Setup
 
 Our RBE construction is implemented as a package in the [rbe](rbe/) directory. We use the BLS12-381 elliptic curve with asymmetric pairings. Add the package to your path in order to use it:
